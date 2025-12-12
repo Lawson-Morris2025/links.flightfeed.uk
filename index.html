@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flightfeed.uk | Links</title>
+    <!-- New Embedded SVG Favicon (LM in Purple/White) for reliability -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%238b5cf6' rx='20'/%3E%3Ctext x='50%25' y='65%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='50' font-weight='700' fill='%23ffffff' text-shadow='2px 2px 4px rgba(0,0,0,0.5)'%3E%3CLM%3C/text%3E%3C/svg%3E">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for the "Inter" font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#8b5cf6', // Electric Purple
+                        'accent': '#22d3ee',  // Vibrant Cyan
+                        'card-bg': '#1f2937', // Deep Slate Gray
+                    },
+                    boxShadow: {
+                        // Custom glow effect for the main card
+                        'glow': '0 20px 25px -5px rgba(139, 92, 246, 0.3), 0 10px 10px -5px rgba(139, 92, 246, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ensures smooth scaling and uses the defined font */
+        body { 
+            font-family: 'Inter', sans-serif;
+            /* Subtle radial gradient background for depth */
+            background: radial-gradient(circle at 50% 10%, #171717, #0a0a0a);
+        }
+
+        /* Keyframes for a subtle fade-in and slight upward lift */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Utility class to apply the animation */
+        .animate-fadeInUp {
+            animation: fadeInUp 0.75s ease-out forwards;
+        }
+
+        /* Staggered animation delays for sections */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        
+        /* Custom Instagram Gradient Class */
+        .btn-instagram {
+            background-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border: 2px solid #e6683c;
+        }
+        .btn-instagram:hover {
+            background-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen flex items-center justify-center p-4">
+
+    <!-- Main Content Container: Centered and responsive card-like layout -->
+    <div class="animate-fadeInUp opacity-0 w-full max-w-xl bg-card-bg p-8 md:p-10 rounded-2xl shadow-glow transition duration-300 hover:shadow-primary/70">
+
+        <!-- Profile Image & Header Section -->
+        <header class="text-center mb-10 delay-100">
+            <!-- Profile Image Placeholder (Replace the URL below with your actual image link!) -->
+            <img src="https://placehold.co/100x100/374151/ffffff?text=FF" 
+                 onerror="this.src='https://placehold.co/100x100/374151/ffffff?text=LM'"
+                 alt="Lawson Morris Profile" 
+                 class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-accent shadow-lg"
+            />
+            
+            <!-- Main Name -->
+            <h1 class="text-6xl font-extrabold tracking-tight text-primary sm:text-7xl">
+                flightfeed.uk
+            </h1>
+        </header>
+
+        <!-- Projects & Social Section -->
+        <div class="border-t border-gray-700 pt-8 delay-200">
+            
+            <!-- Project Links -->
+            <h2 class="text-3xl font-bold mb-6 text-center text-accent">our Sites</h2>
+            <div id="project-links-container" class="space-y-4 mb-10">
+
+                <!-- Link 1: FlightFeed.uk (TOP PRIORITY) -->
+                <a href="https://flightfeed.uk" target="_blank" rel="noopener noreferrer"
+                   class="block w-full text-center px-6 py-4 text-xl font-semibold rounded-xl text-white bg-gray-700/80 border-2 border-gray-700 hover:bg-gray-700 transition duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-offset-4 focus:ring-accent/50 focus:ring-offset-card-bg">
+                    <span class="font-bold text-accent">FlightFeed</span>.uk
+                </a>
+                <!-- Description for FlightFeed.uk -->
+                <p class="text-center text-sm italic text-gray-400 -mt-2 mb-4">
+                    a pwa web app made for drone flyers to find places to fly wales only (apart from east wales) england and scotland coming soon 
+                </p>
+                
+                
+                <!-- Link 4: legal -->
+                <a href="https://legal.lawsonmorris.co.uk" target="_blank" rel="noopener noreferrer"
+                   class="block w-full text-center px-6 py-4 text-xl font-semibold rounded-xl text-white bg-gray-700/80 border-2 border-gray-700 hover:bg-gray-700 transition duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-offset-4 focus:ring-accent/50 focus:ring-offset-card-bg">
+                    <span class="font-bold text-accent">legal</span>.lawsonmorris.co.uk
+                </a>
+                 <!-- Description for legal -->
+                <p class="text-center text-sm italic text-gray-400 -mt-2 mb-4">
+                    copyright and legal 
+                </p>
+
+                <!-- Future link goes here! Copy the button above and change the href and text. -->
+            </div>
+
+            <!-- Social Links Section -->
+            <h3 class="text-3xl font-bold mb-6 text-center text-accent">Find Me On Social</h3>
+            <div id="social-links-container" class="space-y-4">
+                
+                <!-- Link 1: TikTok -->
+                <a href="https://www.tiktok.com/@flightfeed.uk" target="_blank" rel="noopener noreferrer"
+                   class="block w-full text-center px-6 py-4 text-xl font-semibold rounded-xl text-white bg-pink-600/90 border-2 border-pink-700 hover:bg-pink-600 transition duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-offset-4 focus:ring-pink-500/50 focus:ring-offset-card-bg">
+                    <!-- SVG Icon for TikTok -->
+                    <svg class="w-6 h-6 inline mr-3 -mt-0.5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 1.5c-1.38 0-2.5 1.12-2.5 2.5v16c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5V4c0-1.38-1.12-2.5-2.5-2.5zm1 19c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V17h3v3.5zm-1.5-14c-1.66 0-3 1.34-3 3v2h6V7c0-1.66-1.34-3-3-3zM7 9v11h3V9H7z"></path></svg>
+                    TikTok: @flightfeed.uk
+                </a>
+                
+            
+               <!-- FlightFeed.uk Instagram -->
+<a href="https://www.instagram.com/flightfeed.uk" target="_blank" rel="noopener noreferrer"
+   class="block w-full text-center px-6 py-4 text-xl font-semibold rounded-xl text-white btn-instagram border-2 border-pink-700 transition duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-offset-4 focus:ring-red-500/50 focus:ring-offset-card-bg">
+    <!-- SVG Icon for Instagram -->
+    <svg class="w-6 h-6 inline mr-3 -mt-0.5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2.2C5.3 4.2 4.2 5.3 4.2 7.6v8.8c0 2.3 1.1 3.4 3.4 3.4h8.8c2.3 0 3.4-1.1 3.4-3.4V7.6c0-2.3-1.1-3.4-3.4-3.4H7.6zm8.8 1.4c.7 0 1.2.5 1.2 1.2s-.5 1.2-1.2 1.2c-.7 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2zm-4.4 3.2c2.4 0 4.4 2 4.4 4.4s-2 4.4-4.4 4.4-4.4-2-4.4-4.4 2-4.4 4.4-4.4zm0 2.4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+    </svg>
+    Instagram: @flightfeed.uk
+</a>     
+            
+            </div>
+
+            <!-- Contact Section (Direct Email Contact) -->
+            <div class="mt-10 pt-6 border-t border-gray-700 text-center delay-300">
+                <h3 class="text-2xl font-semibold mb-5 text-gray-200">Say Hello</h3>
+                <a href="mailto:contactflightfeed.uk"
+                   class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-lg font-bold rounded-xl shadow-2xl text-white bg-primary hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-[1.03] focus:outline-none focus:ring-4 focus:ring-offset-4 focus:ring-primary/50 focus:ring-offset-card-bg">
+                    <!-- Simple SVG Email Icon -->
+                    <svg class="h-6 w-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 13h9a2 2 0 002-2V5a2 2 0 00-2-2H3a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    contact@flightfeed.uk
+                </a>
+            </div>
+
+            <!-- Footer Domain -->
+<p class="mt-10 text-center text-sm text-gray-500">
+    flightfee.uk | <span id="copyright-year"></span> Lawson Morris — All Rights Reserved.
+</p>
+<script>
+    // Automatically update the year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+        </div>
+    </div>
+    
+    <!-- JavaScript for Auto-Resizing (Important for Google Sites Embed) -->
+    <script>
+        // Function to send the current height of the content to the parent frame (Google Sites)
+        function sendHeight() {
+            // Get the total height of the content, including padding and margins
+            const bodyHeight = document.body.scrollHeight;
+            
+            // Check if we are inside an iframe before trying to send the message
+            if (window.parent && window.parent !== window) {
+                // Post the message to the parent window
+                // '*' means it can be received by any parent origin (necessary for cross-origin iframes)
+                window.parent.postMessage({
+                    height: bodyHeight
+                }, '*'); 
+            }
+        }
+
+        // Send height immediately on load and again on window resize
+        window.onload = sendHeight;
+        window.onresize = sendHeight;
+        
+        // Also observe mutations to the body (like content being added or removed)
+        const observer = new MutationObserver(sendHeight);
+        observer.observe(document.body, { childList: true, subtree: true, attributes: true });
+
+        // Initial call to ensure the height is set immediately after the page content is rendered
+        setTimeout(sendHeight, 100); 
+    </script>
+</body>
+</html>
